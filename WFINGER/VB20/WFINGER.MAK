@@ -1,0 +1,8 @@
+WFINGER.FRM
+C:\WINDOWS\SYSTEM\WSANET.VBX
+ProjWinSize=78,552,167,136
+ProjWinShow=2
+IconForm="Main"
+Title="WFINGER"
+ExeName="WFINGER.EXE"
+Path="C:\VB20"

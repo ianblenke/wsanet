@@ -1,0 +1,7 @@
+Line 64: Class Ini of control Ini was not a loaded control class.
+Line 68: Class NetClient of control NetClient was not a loaded control class.
+Line 107: Class NetServer of control NetServer was not a loaded control class.
+Line 70: The property name LineDelimiter in NetClient is invalid.
+Line 71: The property name RecvThreshold in NetClient is invalid.
+Line 72: The property name SendSize in NetClient is invalid.
+Line 109: The property name QueueSize in NetServer is invalid.

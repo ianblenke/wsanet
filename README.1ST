@@ -1,0 +1,32 @@
+			WSANET.VBX v1.08alpha 
+			      Finally!
+
+		Author: Ian Blenke (iblenke@ic1d.harris.com)
+		
+	This is the distribution package of WSANET v1.08alpha and Examples
+	To unpack:
+c:
+cd \
+pkunzip -d wsanet8a.zip
+
+	This will create a directory called 
+c:\wsanet               - Holds the distribution directories
+
+	The example VB3.0 text saved examples & executables are located in:
+c:\wsanet\wfinger       - An example finger client
+c:\wsanet\wfingerd      - An example finger daemon
+c:\wsanet\winwhois      - An example Whois client
+c:\wsanet\wsmtpc        - An example SMTP client (state machine example)
+c:\wsanet\wsmtpd        - An example SMTP daemon (state machine example)
+c:\wsanet\wnslookup     - An example NSLookup client (very simple)
+
+	Copy *.DLL and *.VBX to your WINDOWS\SYSTEM directory (or at least
+	in your path).
+
+	Copy *.INI to your WINDOWS directory
+
+	Please read README.TXT for more information on the control itself.
+	Please read the WSANET.HLP file for context sensitive help.
+	Check out the README.TXT files for each sample application.
+	Check out SERVERS.TXT for a full list of Whois servers.
+

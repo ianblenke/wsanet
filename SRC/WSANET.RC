@@ -1,0 +1,118 @@
+/* WSANet.RC */
+#include <Windows.h>
+#include "WSANet.H"
+#include "NetClnt.H"
+#include "NetSrvr.H"
+#include "Ini.H"
+#include "Version.h"
+
+#ifdef USE_31
+#include <Ver.h>
+
+VS_VERSION_INFO     VERSIONINFO
+FILEVERSION         WSANET_VERSION_SEPARATED
+PRODUCTVERSION      WSANET_VERSION_SEPARATED
+FILEFLAGSMASK       VS_FFI_FILEFLAGSMASK
+FILEFLAGS           (VS_FF_PRERELEASE | VS_FF_DEBUG)
+FILEOS              VOS_DOS_WINDOWS16
+FILETYPE            VFT_APP
+FILESUBTYPE         VFT2_UNKNOWN
+BEGIN
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1252
+    END
+
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE   "CompanyName",      "Public Domain\0"
+            VALUE   "FileDescription",  "Visual Basic WinSock Client VBX\0"
+            VALUE   "FileVersion",       WSANET_VERSION_TEXT
+            VALUE   "InternalName",     "WSANet\0"
+            VALUE   "LegalCopyright",   "Copyright (c) 1993 Ian Blenke. All rights reserved\0"
+            VALUE   "LegalTrademarks",  "None.\0"
+            VALUE   "OriginalFilename", "WSANET.VBX\0"
+            VALUE   "ProductName",      "WSANET - WinSock Control for Visual Basic\0"
+            VALUE   "ProductVersion",    WSANET_VERSION_TEXT
+            VALUE   "Comments",         "Intended for Public Domain use only! - No Commercial resale permitted in ANY way.\0"
+        END
+    END
+END
+#endif
+
+IDBMP_CLIENT     BITMAP DISCARDABLE "netcu.bmp"
+IDBMP_CLIENTDOWN BITMAP DISCARDABLE "netcd.bmp"
+IDBMP_CLIENTEGA  BITMAP DISCARDABLE "netmu.bmp"
+IDBMP_CLIENTMONO BITMAP DISCARDABLE "neteu.bmp"
+
+IDBMP_SERVER     BITMAP DISCARDABLE "srvcu.bmp"
+IDBMP_SERVERDOWN BITMAP DISCARDABLE "srvcd.bmp"
+IDBMP_SERVEREGA  BITMAP DISCARDABLE "srvmu.bmp"
+IDBMP_SERVERMONO BITMAP DISCARDABLE "srveu.bmp"
+
+IDBMP_INI        BITMAP DISCARDABLE "inicu.bmp"
+IDBMP_INIDOWN    BITMAP DISCARDABLE "inicd.bmp"
+IDBMP_INIEGA     BITMAP DISCARDABLE "inimu.bmp"
+IDBMP_INIMONO    BITMAP DISCARDABLE "inieu.bmp"
+
+STRINGTABLE
+BEGIN
+    IDS_WRONGVER,      "WSANET.VBX Requires a WINSOCK.DLL that is Windows Socket v1.1 compliant. Please contact your TCP/IP vendor for a WINSOCK.DLL for your network software. This software package will not function without a valid WINSOCK.DLL"
+
+    ERR_None,          "Ok."
+    WSAERR_BadHostAddr,"Invalid HostAddr. Must be in dotted internet format (i.e. 127.0.0.1)"
+    WSAERR_AlreadyConn,"Already connected to a remote host"
+    WSAERR_NoTimers,   "No system timers available for TimeOut property!"
+    WSAERR_RecvBuffer, "Receive buffer non-existant!"
+    WSAERR_SendOverFlow,"Not enough Send buffer room, try increasing SendSize"
+    WSAERR_NotConn,    "Not connected!"
+
+    WSANOTINITIALISED,"WSANOTINITIALISED: Windows Sockets API not initialized!"
+    WSAENETDOWN,      "WSAENETDOWN: WinSock says the network is down!"
+    WSAENETUNREACH,   "WSAENETUNREACH: Network unreachable"
+    WSAENETRESET,     "WSANETRESET: Network reset!"
+    WSAECONNABORTED,  "WSAECONNABORTED: Connection aborted!"
+    WSAECONNRESET,    "WSAECONNRESET: Connection reset?"
+    WSAEACCES,        "WSAEACCES: Access error!"
+    WSAEADDRINUSE,    "WSAEADDRINUSE: Something else is already using that local port!"
+    WSAEADDRNOTAVAIL, "WSAEADDRNOTAVAIL: Address not available"
+    WSAEALREADY,      "WSAEALREADY: Already used/in use?"
+    WSAEDESTADDRREQ,  "WSAEDESTADDRREQ: Destination address request"
+    WSAEMSGSIZE,      "WSAEMSGSIZE: Message Size"
+    WSAEBADF,         "WSAEBADF: Bad file?"
+    WSAEFAULT,        "WSAEFAULT: Fault Error!"
+    WSAEINTR,         "WSAEINTR: Interrupt Error!"
+    WSAEINPROGRESS,   "WSAEINPROGRESS: Something is blocking!"
+    WSAEAFNOSUPPORT,  "WSAEAFNOSUPPORT: AF Not supported?"
+    WSAEINVAL,        "WSAEINVAL: Invalid parameter"
+    WSAEMFILE,        "WSAEMFILE: Out of file handles?"
+    WSAENOBUFS,       "WSAENOBUFS: No more buffers left"
+    WSAEISCONN,       "WSAEICONN: You are already connected"
+    WSAENOTCONN,      "WSAENOTCONN: You are not connected. You using Lanera's TCP/IP?"
+    WSAESHUTDOWN,     "WSAESHUTDOWN: WinSock Shutdown iminent?"
+    WSAETOOMANYREFS,  "WSAETOOMANYREFS: Too many references"
+    WSAETIMEDOUT,     "WSAETIMEDOUT: Timed out!"
+    WSAECONNREFUSED,  "WSAECONNREFUSED: Connection refused?"
+    WSAELOOP,         "WSAELOOP: Loop?!?"
+    WSAENAMETOOLONG,  "WSAENAMETOOLONG: Name too long?"
+    WSAEHOSTDOWN,     "WSAEHOSTDOWN: Host down?"
+    WSAEHOSTUNREACH,  "WSAEHOSTUNREACH: Host unreachable?"
+    WSASYSNOTREADY,   "WSASYSNOTREADY: System not ready"
+    WSAVERNOTSUPPORTED,"WSAVERNOTSUPPORTED: Version not supported"
+    WSAHOST_NOT_FOUND,"WSAHOST_NOT_FOUND: Host not found"
+    WSATRY_AGAIN,     "WSATRY_AGAIN: Try, try again"
+    WSANO_RECOVERY,   "WSANO_RECOVERY: Can't recover"
+    WSANO_DATA,       "WSANO_DATA: No data"
+    WSAENOTSOCK,      "WSAENOTSOCK: Parameter was not a valid socket!"
+    WSAEPROTOTYPE,    "WSAEPROTOTYPE: Bad protocol type?"
+    WSAENOPROTOOPT,   "WSAENOPROTOOPT: No protocol option?"
+    WSAEPROTONOSUPPORT,"WSAEPROTONOSUPPORT: Protocol not supported"
+    WSAEOPNOTSUPP,    "WSAEOPNOTSUPP: Operation not supported"
+    WSAEPFNOSUPPORT,  "WSAEPFNOSUPPORT: Protocol family not supported?"
+    WSAEWOULDBLOCK,   "Requested operation would block"
+END
+
+    // Don't ask me why, but this has to be down here!
+#include "About.DLG"

@@ -1,0 +1,30 @@
+LIBRARY     WSANET
+
+EXETYPE     WINDOWS
+
+DESCRIPTION 'Visual Basic Custom Network Control v1.08alpha - By: Ian C. Blenke'
+
+CODE        MOVEABLE PRELOAD
+DATA        MOVEABLE SINGLE PRELOAD
+
+HEAPSIZE    2048
+
+SEGMENTS
+    WEP_TEXT    FIXED PRELOAD
+
+EXPORTS
+    LibMain @2
+
+    VBINITCC            @3
+    VBGetModelInfo      @4
+
+    NetClientCtlProc    @5
+    VBTERMCC            @6
+    IniCtlProc          @7
+    NetServerCtlProc    @8
+
+    AboutWndProc        @10
+    AboutDlgProc        @11
+
+    NetClientSendBlock  @20
+    NetClientRecvBlock  @21

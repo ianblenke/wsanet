@@ -1,0 +1,11 @@
+WINWHOIS.FRM
+C:\WINDOWS\SYSTEM\WSANET.VBX
+C:\WINDOWS\SYSTEM\THREED.VBX
+..\COMMON\MISC.BAS
+..\COMMON\ABOUT.FRM
+ProjWinSize=73,458,195,171
+ProjWinShow=2
+IconForm="Main"
+Title="WinWhois - WinSock Whois Client"
+ExeName="WINWHOIS.EXE"
+Path=".."

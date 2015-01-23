@@ -1,0 +1,31 @@
+' Remember, Visual Basic 1.00 cannot use HLSTR for properties,
+' so the following functions do the same thing as RecvBlock and
+' SendBlock.
+
+' Pass string to send, number sent is returned
+Declare Sub NetClientSendBlock Lib "wsanet.vbx" (Block As String) As Integer
+
+' Pass number of chars to get, string is returned
+Declare Sub NetClientRecvBlock Lib "wsanet.vbx" (ByVal Size As Int) As String
+
+' The following are the errors that the control will return on its
+' own:
+
+Global Const ERR_OUTOFMEMORY = 7 ' If a response string could not be created
+
+Global Const VBERR_INVALIDPROPERTYVALUE = 380
+Global Const VBERR_BADVBINDEX = 381
+
+Global Const VBERR_READONLY = 383  ' For those read only properties
+Global Const VBERR_WRITEONLY = 394 ' For those write only properties
+
+Global Const WSAERR_BadHostAddr = 20000  ' HostAddr property set to bad form
+Global Const WSAERR_AlreadyConn = 20001  ' You can't connect twice!
+Global Const WSAERR_NoTimers = 20002     ' No timers available
+Global Const WSAERR_RecvBuffer = 20003   ' RecvBuffer invalid!
+Global Const WSAERR_SendOverFlow = 20004 ' Your SendSize property is too small
+Global Const WSAERR_NotConn = 20005      ' Not aren't connected yet
+
+Global Const LISTEN_CLOSE = 0
+Global Const LISTEN_REUSE = 1
+Global Const LISTEN_DONTREUSE = 2

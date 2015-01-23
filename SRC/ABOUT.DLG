@@ -1,0 +1,14 @@
+
+AboutDlg DIALOG 60, 39, 198, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About WSANET.VBX"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Windows Sockets Network VBX v1.08alpha",  101, 8, 6, 179, 10
+    CTEXT           "Author: Ian C. Blenke", 102, 5, 18, 190, 9
+    CTEXT           "VB suggestions: George Michael Carr", 103, 6, 28, 182, 8
+    CTEXT           WSANET_VERSION_DATE, 104, 7, 41, 188, 8
+    LTEXT           "This Visual Basic v1.0+ compatible control requires Windows Sockets v1.1 to run. Read WSANET.HLP for more information.",
+                    105, 7, 52, 183, 29
+    PUSHBUTTON      "&Ok", IDOK, 72, 87, 40, 14
+END
